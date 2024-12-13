@@ -2,13 +2,9 @@
 <html lang="ja">
 
 <head>
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="256x256" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/IMG_9455-modified.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/180.png">
-    <link rel="apple-touch-icon" sizes="32x32" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/32.png">
-    <link rel="apple-touch-icon" sizes="16x16" href="https://raw.githubusercontent.com/siawaseok3/yuki-bbs-siawaseok/main/views/16.png">
-    <title>連番を簡単に生成！！</title>
+    <link rel="shortcut icon" href="https://uploads.scratch.mit.edu/get_image/project/1064940829_800x800.png">
+    
+    <title>{{ result['title'] }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="/css/pure-min.css">
     <link rel="stylesheet" href="/css/grids-responsive-min.css">
@@ -57,7 +53,7 @@
                         {% if result["type"] == "video" %}
                         <a style="width:100%" href="/watch?v={{ result['id'] }}">
                             <div class="thumbnail">
-                                <img loading="lazy" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['id'] }}{% else %}https://img.youtube.com/vi/{{ result['id'] }}/0.jpg{% endif %}" onerror="document.cookie = 'proxy=True;max-age=2592000;';">
+                                <img loading="lazy" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['id'] }}{% else %}https://ipad4610desuyo.jake.eu/vi/{{ result['id'] }}/0.jpg{% endif %}" onerror="document.cookie = 'proxy=True;max-age=2592000;';">
                                 <p class="length">{{result["length"]}}</p>
                             </div>
                             <p dir="auto">{{ result['title'] }}</p>
@@ -85,7 +81,7 @@
                         <a style="width:100%" href="/playlist?list={{result["id"]}}">
                 
                             <div class="thumbnail">
-                                <img loading="lazy" tabindex="-1" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['thumbnail'] }}{% else %}https://img.youtube.com/vi/{{ result['thumbnail'] }}/0.jpg{% endif %}">
+                                <img loading="lazy" tabindex="-1" class="thumbnail" src="{% if proxy == "True" %}/thumbnail?v={{ result['thumbnail'] }}{% else %}https://ipad4610desuyo.jake.eu/vi/{{ result['thumbnail'] }}/0.jpg{% endif %}">
                                 <p class="length">{{result["count"]}}個の動画</p>
                             </div>
                         
