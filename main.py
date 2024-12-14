@@ -364,7 +364,6 @@ def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
         response.set_cookie("yuki","True",max_age=60 * 60 * 24 * 7)
         return template("newy.html",{"request": request})
     print(check_cokie(yuki))
-    return redirect("/")
 
 
 @app.get("/", response_class=HTMLResponse)
