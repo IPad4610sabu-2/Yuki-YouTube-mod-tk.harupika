@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>ボタン テスト</title></head><body>
+    <title>Aキーを押せ</title></head><body>
     <link rel="shortcut icon" href="https://uploads.scratch.mit.edu/get_image/project/1064940829_800x800.png">
 
-        <button id="accept-btn">テストボタン1</button>
-       <input type="button" value="テストボタン2" onclick="alert('ボタンが押されました')">
+       // Key
+    document.addEventListener('DOMContentLoaded', function() {
+      const eventKey = JSON.parse(localStorage.getItem('eventKey')) || ['Ctrl', 'E']
+      const pLink = localStorage.getItem('pLink') || 'https://classroom.google.com/'
+      let pressedKeys = []
+      document.addEventListener('keydown', function(event) {
+        pressedKeys.push(event.key)
+        if (pressedKeys.length > eventKey.length) {
+          pressedKeys.shift()
+        }
+        if (eventKey.every((key, index) => key === pressedKeys[index])) {
+          window.location.href = pLink
+          pressedKeys = []
+        }
+      })
+    })
+
 
     </div>
     <script src="script.js"></script>
