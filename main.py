@@ -126,8 +126,8 @@ r"https://yt.artemislena.eu",
 r"https://invidious.esmailelbob.xyz",
 r"https://invidious.projectsegfau.lt",
 r"https://invidious.dhusch.de/",
-r"https://inv.odyssey346.dev/"
-r"https://iv.duti.dev/",
+r"https://inv.odyssey346.dev/",
+r"https://iv.duti.dev/"
 ]
 url = requests.get(r'https://raw.githubusercontent.com/mochidukiyukimi/yuki-youtube-instance/main/instance.txt').text.rstrip()
 version = "1.0"
